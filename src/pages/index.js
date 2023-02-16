@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
         <div >
-         <h1>My Portfolio</h1>
+         <h1 className='text-red-500'>My Portfolio</h1>
         </div>
 
     </>
