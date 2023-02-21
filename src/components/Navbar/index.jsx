@@ -13,6 +13,9 @@ const NavBar = () => {
               height={50}
             />
           </Link>
+          <Link className="mx-5 my-2 text-white" href="/projects">
+           Projects
+          </Link>
         </div>
       </nav>
     </>
