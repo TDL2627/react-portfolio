@@ -16,6 +16,9 @@ const NavBar = () => {
           <Link className="mx-5 my-2 text-white" href="/projects">
            Projects
           </Link>
+          <Link className="mx-5 my-2 text-white" href="/contact">
+           Contact
+          </Link>
         </div>
       </nav>
     </>
