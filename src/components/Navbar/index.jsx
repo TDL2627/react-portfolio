@@ -19,6 +19,9 @@ const NavBar = () => {
           <Link className="mx-5 my-2 text-white" href="/contact">
            Contact
           </Link>
+          <Link className="mx-5 my-2 text-white" href="/skills">
+           Skills
+          </Link>
         </div>
       </nav>
     </>
