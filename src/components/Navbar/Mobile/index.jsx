@@ -30,7 +30,7 @@ const MobileNavBar = () => {
                   key={item.title}
                 >
                   <div>
-                    <p className="my-20 p-5 text-black">{item.title}</p>
+                    <p className="my-2 p-5 text-black">{item.title}</p>
                   </div>
                 </Link>
               ) : (
@@ -38,26 +38,33 @@ const MobileNavBar = () => {
                   <Link
                     key={item.title}
                     className=""
-                    href={`/#${item.title}`}
+                    href={`/#${item.handle}`}
                     onClick={() => {
-                      if(openMenu == i){
-                        setOpenMenu(-1)
-                        setScrolling(false)
-                      }else{
+                      if (openMenu == i) {
+                        setOpenMenu(-1);
+                        setScrolling(false);
+                      } else {
                         setOpenMenu(i);
+                        setScrolling(true);
                       }
-                     
-                      setScrolling(true);
                     }}
                   >
-                    <p id={item.title} className="text-black p-5 my-20">
+                    <p id={item.handle} className="text-black p-5 my-2">
                       {item.title}
                     </p>
                   </Link>
                   {openMenu == i && (
-                    <div>
-                      <p>{item.title}</p>{" "}
-                    </div>
+                    <>
+                      {item?.sub_collections.length !== 0 && (
+                        <>
+                          {item?.sub_collections.map((subItem) => (
+                            <div className="px-5">
+                              <p>{subItem.menu_title}</p>
+                            </div>
+                          ))}
+                        </>
+                      )}
+                    </>
                   )}
                 </>
               )}

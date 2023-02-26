@@ -928,6 +928,7 @@
   },
   {
     "title": "UA Technology",
+    "handle": "pages/ua-tech-landing-page",
     "sub_collections": [
       {
         "menu_title": "Shop All UA Technology",
